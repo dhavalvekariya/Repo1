@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <h1>
+        This Is Paragraph
+    </h1>
+</head>
+
+<body>
+    <p>Hello World </p>
+    <p id="demo"></p>
+    <script>
+        let person = {
+            first_name: 'Dhaval',
+            last_name: 'Vekariya',
+        }
+
+        function getdisplay() {
+
+            console.log(person);
+            alert(person.first_name);
+        }
+
+        getdisplay();
+
+
+        let name = ["A", "B", "C", "D"];
+        for (i = 0; i < name.length; i++) {
+            document.write(name[i] + "<br/>");
+        }
+
+        class Encapsulation {
+
+
+            setvalue(name, id) {
+                this.name = name;
+                this.id = id;
+
+            }
+
+            getname() {
+                return this.name;
+            }
+            getId() {
+                return this.id;
+            }
+
+        }
+        class Main extends Encapsulation {
+
+
+        }
+        value = new Encapsulation();
+        value.setvalue("Dhaval", "101");
+        document.write(value.getId() + " " + value.getname());
+
+
+
+        class Inheritance {
+
+            
+            setdata(name,surname){
+                this.name=name;
+                this.surname=surname;
+            }
+            age() {
+
+                document.write("<br/>"+`${this.name}  ${this.surname} age is 21 years old `);
+            }
+            birthyear() {
+                document.write(` ${this.name} ${this.surname}birthyear is 1999 `);
+            }
+
+        }
+
+
+        class Base extends Inheritance {
+
+
+
+            sonAge() {
+            
+                super.age();
+                document.write(`${this.name} is son `);
+            }
+            sonBirthyear(){
+                document.write(`${this.name} birth yearr is 2020`);
+            }
+
+
+        }
+
+        answer=new Base();
+
+            answer.setdata("xyz","www")
+            document.write(answer.sonAge());
+        
+
+
+
+
+
+        class Polimorphism{
+               
+            constructor(namexyz){
+
+                  this.poli=namexyz;  
+            }
+
+            eat(){
+                document.write("<br/>"+this.poli+`eat Banana`)
+            }
+            
+
+
+        }   
+        class Dog extends Polimorphism{
+
+
+        }
+         
+        var value=new Dog("monkey");
+        document.write("<br/>"+value.eat());
+
+
+
+        //Abstraction
+        function school(schoolname,schoolyear){
+
+            this.schoolname=schoolname;
+            this.schoolyear=schoolyear;
+            this.ageofSchool= function(){
+               var cyear=new Date();
+               
+               this.finalyear=cyear.getFullYear() - this.schoolyear;
+               document.write(this.schoolname+"school age is"+this.finalyear)
+            }
+        }
+let aa=new school("LPD",1995);
+aa.ageofSchool();
+
+
+    </script>
+
+        
+
+</body>
+
+</html>
